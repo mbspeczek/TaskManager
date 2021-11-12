@@ -1,0 +1,116 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+
+\addtolength{\hoffset}{-1.5cm}
+\addtolength{\marginparwidth}{-1.5cm}
+\addtolength{\textwidth}{3cm}
+\addtolength{\voffset}{-1cm}
+\addtolength{\textheight}{2.5cm}
+\setlength{\topmargin}{0cm}
+\setlength{\headheight}{0cm}
+
+\begin{document}
+
+\title{Dokumentacja projektu PyTaskManager}
+\author{Pęczek Mateusz, Zygmunt Klaudia }
+\date{\today}
+
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Wstęp}
+    Każde przedsiębiorstwo musi posiadać system zarządzania zadaniami. Niezależnie od tego, czym zajmuje się dane przedsiębiorstwo. Zadania mu powierzone powinny zostać, zaplanowane oraz możliwe do wykonania w zamierzonym czasie. W poniższym projekcie przedstawione zostaną kolejne etapy wykonania i wdrożenia systemu pozwalającego na definiowanie i planowanie zadań. Udokumentowane zostanie proces od momentu narodzin pomysłu, aż do momentu implementacji i wdrożenia rozwiązania. 
+    Bez odpowiedniej metodyki planowania zadań lub odpowiedniego narzędzia, w każdym przedsiębiorstwie pojawi się problem związany z przydziałem zadań. Zadaniem poniższego projektu będzie próba rozwiązania tego problemu.  
+
+\subsection{Cel dokumentacji}
+    
+        Celem planu zarządzania projektem, jest uzgodnienie metod działania podczas przeprowadzania działań związanych z implementacją projektu. 
+    Zdefiniowany proces zarządzania projektem, wraz z możliwością przydziału kolejnych zadań, jest kluczowym elementem dla projektu. Realizację projektu przeprowadza dwuosobowy zespół, złożony z menedżera projektu, który pełni również rolę analityka i dewelopera oraz drugiego członka zespołu, pełniącego rolę dewelopera.
+    
+    W projekcie udział brać będą osoby pełniące następujące role:
+\begin{itemize}
+    \item Inwestor
+    \item Menedżer projektu
+    \item Analityk potrzeb klienta 
+    \item Programiści
+    \item Testerzy
+\end{itemize}
+    Projekt realizowany jest przez dwuosobowy zespół. Członkowie zespołu przygotowują zlecone im zadania w przeciągu dwutygodniowych okresów implementacyjnych. Po upływie tego okresu, oddana zostaje część działającej implementacji. Rozpoczęcie każdego dnia projektowego zaczyna się od 10-15 minutowego sprawozdania z minionych realizacji oraz przedstawienia zamiarów realizacji na dzień spotkania. Każde wprowadzenie nowej implementacji lub jej znaczącego elementu, powiązane jest z odbyciem dodatkowych 10-15 minutowych spotkań projektowych, na których omówione są potrzeby i sposoby jej przeprowadzenia. Z racji na małą ilość członków zespołu, wprowadzenie tego rozwiązania, nie wpłynie negatywnie na projekt. Zakończenie dziennego procesu implementacyjnego związane jest z oddaniem raportu. Raport zawiera postęp prac, przedstawiony w postaci listy gotowych i zleconych komponentów, czas jaki został poświęcony na każdy z podanych elementów oraz czas jaki pozostał do zakończenia danego okresu implementacyjnego. Zadaniem raportu jest przekazanie informacji o faktycznym stanie projektu wraz z przybliżoną ilością godzin jakie zostały oraz muszą zostać poświęcone na dalszą implementację. 
+    - procesy techniczne
+    Do procesów technicznych, zawiera się konieczność używania oprogramowani kontroli wersji. 
+    Z racji niekomercyjnego charakteru projektu, oraz znajomości technologi, zadanie to powierzone będzie rozproszonemu systemowi kontroli wersji GIT.
+    - procesy zarządcze
+    Do procesów zarządczych zaliczają się:
+\begin{itemize}
+    \item Spotkania przeprowadzane przed rozpoczęciem dnia projektowego, dzień projektowy jest rozumiany tutaj jako dzień, w którym projekt jest implementowany. Spotkania trwają od 10 do 15 minut.
+    \item Spotkania implementacyjne. Będące 10-15 minutowymi spotkaniami developera wdrażającego daną implementację wraz z menadżerem projektu, poprzedzającymi wdrożenie nowego fragmentu implementacji lub kluczowego elementu implementacji. Pozwalają one na współgranie z wymaganiami projektowymi. 
+    \item Raporty dziennej implementacji. Po zakończeniu działań implementacyjnych, sporządzany jest raport zawierający informacje na temat stanu powierzonych zadań oraz czasu jaki został poświęcony na ich wykonanie oraz czasu dostępnego. Raport może zawierać również uwagi na temat projektu, implementacji lub procesu projektowego.  
+\end{itemize}
+    
+\subsection{Zakres dokumentacji}
+    Dokumentacja zawiera proces przeprowadzenia implementacji narzędzia do planowania dziennej listy zadań, wraz z możliwością planowania działania długoterminowego. W dokumentacji zawarty jest słownik pojęć wraz z definicjami wykorzystywanymi w projekcie. Dokumentacja zawiera rozdział ze zwięźle opisanymi streszczeniami celów projektu wraz z jego krótkim opisem. Dokument zawiera rozdział poświęcony wymienieniu i opisowi wszystkich produktów, które zostaną użyte w projekcie. W dokumencie zawarto również model procesu projektowego, organizację projektu, sposoby zarządzania, proces techniczny, etapy pracy wraz z harmonogramem i budżetem oraz rozdział zawierający ewolucję planu projektu.
+
+\subsection{Przeznaczenie dokumentacji}
+    Dokumentacja projektowa skierowana jest do osób związanych z projektem wdrożenia aplikacji, osób decyzyjnych oraz developerów. Osobą odpowiedzialną za jej tworzenie jest Mateusz Pęczek, będący menadżerem projektu. Zadanie aktualizacji dokumentacji wraz z jej utrzymaniem i prowadzeniem kontroli również powierzone jest menedżerowi projektu.
+
+\newpage
+
+\section{Definicje}
+    W tym punkcie, zawarte i wyszczególnione wraz z ich rozumieniem są wszystkie zwroty i słowa, które wymagaja jednoznacznego określenia. Jednoznaczne określanie definicji pozwala na zmniejszenie lub eliminację przyszłych błędów wynikających z błędnej komunikacji. Błędy te, mogą dotyczyć prostych elementów dokumentacji lub elementów składowych występujących w kluczowych kawałkach aplikacji. 
+
+\begin{table}[hbt]
+
+\begin{tabular}{|c|p{10cm}|}
+\hline
+     Definicja & Treść \\
+\hline
+     Cykl życia oprogramowania. & Przedział czasowy pomiędzy zamysłem / wyobrażeniem oprogramowania, wdrożeniem, działaniem a momentem braku możliwości jego dalszego użytkowania. Cykl życia oprogramowania obejmuje zazwyczaj fazy: koncepcyjną, analizy wymagań, realizacji, testowania, instalowania i sprawdzania, działania i konserwacji oraz czasami fazę wycofania.  \\
+\hline
+     Działania implementacyjne. & Ogół działań poświęconych stworzeniu fragmentu działającej funkcjonalności w aplikacji. \\
+\hline
+     Okres implementacyjny. & Okres dwóch tygodni, podczas których wykonywane są działania implementacyjne. \\
+\hline     
+     Plan projektu. & Dokument, który opisuje podejście techniczne i w zakresie zarządzania w obrębie realizowanego projektu. Plan opisuje zazwyczaj: cele, prace do wykonania, wymagane zasoby, zastosowane metody, procedury, jakie mają być przestrzegane, terminy, jakie mają być dotrzymane i sposób, w jaki projekt będzie zorganizowany. \\
+\hline
+     Produkt informatyczny. & Kompletny zestaw rozwiązań lub aplikacji dostarczany wraz z procedurami oraz niezbędną dokumentacją. \\
+\hline    
+     Produkt projektu. & Produkt, w swojej końcowej formie, przygotowany do przekazania zleceniodawcy. \\
+\hline
+
+\end{tabular}
+\caption{Słownik pojęć.}
+\label{table:1}
+\end{table}
+
+
+    
+\section{Zakres}
+    Celem projektu jest dostarczenie rozwiązania pozwalającego na definiowanie zadań, które mają zostać zrealizowane w przyszłości. 
+    Dane przechowywane są w bazie danych. Systemem bazodanowym realizującym to zadanie jest PostgreSQL. Aplikacja implementowana jest w języku Python wraz z internetowym frameworkiem Django. Dostęp do danych realizowany jest przez sieć na każdym, posiadającym połączenie z serwerem dostarczającym aplikację, komputerze. Dane przekazywane są poprzez nieszyfrowany protokół HTML. Dostęp do informacji zabezpieczony jest za pomocą kont użytkowników. Użytkownicy podzieleni zostaną na grupy, zgodnie z ich uprawnieniami. Pozwala to na jednoznaczne określenie, kto uzyskał dostęp lub kto wprowadza dane. Aplikacja pozwala na definiowanie zadań, które będą realizowane. Każde zadanie ma przypisaną date zapisu, datę rozpoczęcia oraz date możliwego zakończenia (w przypadku gdy data ta jest możliwa do uzgodnienia). Do każdego zadania możliwe jest przypisanie odpowiedniej notatki, która zawiera informacje o zadaniu oraz o celach, które należy spełnić. Do każdego zadania dodana może zostać lista punktów, na która może być edytowana po zakończeniu etapu realizacji. Aplikacja posiada również możliwość ustalania przypomnień.
+\section{Produkt projektu}
+    Nazwa produktu: PyTaskManager.
+    Data dostawy: 17.01.2022.
+    Miejsce dostawy: ul. Zamenhofa 1a 33–300 Nowy Sącz.
+
+    Produktem projektu są:
+\begin{itemize}
+    \item Aplikacja „PyTaskManager” realizującą dodawanie, modyfikowanie i usuwanie nowych zadań, wraz z          możliwością zarządzania czasem i składowymi tych zadań.
+    \item Baza danych oparta o PostgreSQL.
+    \item Instalacja wraz z konfiguracją i implementacją rozwiązania w frameworku Django.
+    \item Instalacja języka Python wraz z koniecznymi do funkcjonowania aplikacji pakietami.
+
+\end{itemize} 
+    
+   
+
+\end{document}
