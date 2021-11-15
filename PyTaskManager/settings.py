@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'MainApp',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +74,6 @@ WSGI_APPLICATION = 'PyTaskManager.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-# default for postgre database
 # needed packages: postgresql - as server, psycopg2 - for connections
 DATABASES = {
     'default': {
