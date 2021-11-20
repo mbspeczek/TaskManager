@@ -1,9 +1,20 @@
-<h1>Register form:</h1>
+{% extends 'baseTemplate.html' %}
+{% block head%}
+<title>Register page</title>
+{% endblock %}
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form}}
+{% block content %}
+        <h1>Register form:</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <hr>
+            <p>Username: {{ form.username }}</p>
+            <p>Password: {{ form.password1 }}</p>
+            
+            <p>Password confirmation: {{ form.password2 }}</p>
+            <br><br>
+        <input type="submit" value="Register user">
 
-<input type="submit" value="Register user">
-
-</form>
+        </form>
+        {% endblock %}

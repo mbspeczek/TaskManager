@@ -30,17 +30,19 @@ def loginPage(request):
             if user is not None:
                 login(request, user)
                 return redirect('home')
-        
+            else:
+                context = {'message':'Login issue! Wrong login or password!'}
+                return render(request, 'accounts/login.html', context)
 
         context = {}
         return render(request, 'accounts/login.html', context)
 
 @login_required(login_url='/users/login/')
 def homePage(request):
-    context = {}
+    context = {'name':request.user.get_username()}
     return render(request, 'accounts/homepage.html', context)
 
 @login_required()
 def logoutPage(request):
     logout(request)
-    return redirect('login')
+    return redirect('default_page')

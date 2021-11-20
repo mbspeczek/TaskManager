@@ -1,11 +1,20 @@
-<h1> Login form </h1>
+{% extends 'baseTemplate.html' %}
 
-<form action="" method="post">
-    {% csrf_token %}
-    Login <br>
-    <input type="text" name="username"> <br>
-    Hasło <br>
-    <input type="password" name="password"> <br>
-    <input type="submit" value="Login">
-  
-</form>
+    {% block head%}
+    <title>Login page</title>
+    {% endblock %}
+
+    {% block content%}
+    
+    <h1> Login form </h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            Login <br>
+            <input type="text" name="username"> <br>
+            Password <br>
+            <input type="password" name="password"> <br>
+            <p style="color:red;">{{message}}</p>
+            <input type="submit" value="Login">
+        </form>
+    
+        {% endblock %}

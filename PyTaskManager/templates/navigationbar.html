@@ -1,0 +1,21 @@
+<style>
+.navigationBar{
+        background-color: lightgreen;
+        height: auto;
+        width: auto;
+        padding: 10px;
+        text-align: center;
+
+    }
+.navigationBar a{
+    color:white;
+    text-decoration: none;
+    background-color: yellowgreen;
+    border: solid yellowgreen 2px;
+}
+</style>
+<div class="navigationBar">
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+    <a href="{% url 'default_page' %}">Home</a>
+</div>

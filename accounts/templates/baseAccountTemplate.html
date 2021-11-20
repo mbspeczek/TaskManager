@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head%}
+        
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container" style="margin: 10px 10px 10px 10px;"></div>
+            {% include 'logobar.html' %}
+            {% include 'accountNavigationBar.html' %}
+            <style>
+                .content{
+                    position: relative;
+                    float: left;
+                    width: 78%;
+                    height: auto;
+                    background-color: white;
+                    padding: 1%;
+                    margin-top:10px ;
+                    border-radius: 10px 10px 30px 30px;
+                }
+                
+                .menu{
+                    position: relative;
+                    float: right;
+                    width: 17%;
+                    height: auto;
+                    background-color: white;
+                    padding: 1%;
+                    margin-top:10px ;
+                    border-radius: 10px 10px 30px 30px;
+                }
+
+            </style>
+            <div class="content">
+                {% block content%}
+            
+                {% endblock %}
+            </div>
+                
+
+            <div class="menu">
+                <h3 style="text-align:center;">Menu</h3>
+                {% block menu%}
+                
+                {% endblock %}
+        
+            </div>
+
+        </div>
+        
+    </body>
+</html>

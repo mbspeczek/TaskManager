@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head%}
+        
+        {% endblock %}
+    </head>
+    <body>
+        <div class="content" style="margin: 10px 10px 10px 10px;"></div>
+            {% include 'logobar.html' %}
+            {% include 'navigationbar.html' %}
+            
+                {% block content%}
+            
+                {% endblock %}
+        </div>
+        
+    </body>
+</html>

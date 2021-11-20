@@ -10,4 +10,5 @@ def main_view(request):
     return HttpResponse("main veiw.")
 
 def default_page(request):
-    return HttpResponse("<h1>Default page.<h1>")
+    context = {}
+    return render(request,'mainViews/mainpage.html', context)
